@@ -26,7 +26,7 @@ export interface GojsDiagramProps<N extends BaseNodeModel, L extends LinkModel> 
     linkKeyProperty?: string;
     makeUniqueKeyFunction?: () => void;
     makeUniqueLinkKeyFunction?: () => void;
-    updateDiagramProps: (myDiagram: Diagram) => any;
+    updateDiagramProps: (myDiagram: Diagram) => void;
 }
 
 export interface GojsModel extends go.Model {

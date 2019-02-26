@@ -81,9 +81,9 @@ describe('<GojsDiagram />', () => {
         });
     };
 
-    const updateDiagramProps = (diagram: Diagram): any => {
+    const updateDiagramProps = (myDiagram: Diagram): void => {
         // The function could kept empty or we can add diagram properties that we wish to change. The reason to make this function user defined is to give more customization options to user. And also, its bit difficult to cover all the use cases of the charting library.
-        diagram.layout = go.GraphObject.make(go.LayeredDigraphLayout, { direction: 90 });
+        myDiagram.layout = go.GraphObject.make(go.LayeredDigraphLayout, { direction: 90 });
     };
 
     const myDiagramId = 'myDiagramId';
@@ -105,8 +105,8 @@ describe('<GojsDiagram />', () => {
                     diagram = createDiagram(myDiagramId);
                     return diagram;
                 }}
-                updateDiagramProps={diagram => {
-                    updateDiagramProps(diagram);
+                updateDiagramProps={myDiagram => {
+                    updateDiagramProps(myDiagram);
                 }}
                 className="fakecss"
                 onModelChange={modelChangeCallback}
